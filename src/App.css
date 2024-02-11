@@ -1,38 +1,422 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Onboarding.css */
+.landing-page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  z-index: 1;
+  overflow: auto;
+}
+.onboarding-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 2;
+}
+.top-container {
+  display: flex;
+  flex-direction: row; /* Updated to horizontal layout */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-around; /* Adjusted spacing for better alignment */
+  margin-top: 200px;
 }
 
-.App-link {
-  color: #61dafb;
+.greeting {
+
+  margin-right: 500px;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.hello-text {
+width: 148px;
+height: 26px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 26px;
+letter-spacing: 2px;
+text-transform: uppercase;
+
+color: #666C89;
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.question-text {
+  width: 312px;
+height: 82px;
+
+/* Title 2> Bold- 32px */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 41px;
+/* or 128% */
+letter-spacing: -0.03em;
+
+color: #021a43;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+
+.search {
+  box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9px 13px;
+gap: 102px;
+
+width: 312px;
+height: 50px;
+
+background: #FBFBFB;
+border: 1px solid #F2F2F2;
+border-radius: 10px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+
+.search-bar{
+  width: 150px;
+  height: 40px;
+
+/* Caption> Medium- 13px */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 140%;
+/* or 18px */
+display: flex;
+align-items: center;
+letter-spacing: -0.01em;
+
+color: #9B9E9F;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+padding: 1px 2px;
+
+}
+
+.search-icon{
+position: relative;
+width: 32px;
+height: 32px;
+right: 15.5px;
+top: calc(50% - 32px/2);
+
+/* Color/Brand/Primary/Blue */
+background: #6759FF;
+border-radius: 8px;
+
+cursor:pointer;
+
+}
+
+.dark-mode {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+.slideshow-container {
+  display: flex;
+  transition: transform 0.5s ease; /* Add transition for smooth sliding effect */
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.face-card img {
+  width: 300px; /* Adjust the size of the image as needed */
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid #2a2a2a; 
+  box-shadow: 0px 10px 120px rgba(37, 56, 84, 0.08);
+  margin-top: 100px;
+}
+
+.main-text {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif; /* Change to the desired font-family */
+  letter-spacing: -0.02em; /* Slightly reduced letter-spacing */
+  font-size: 24px; /* Adjusted font size for better readability */
+  color: #FFFFFF;
+}
+
+.start-btn {
+  background-color: #0f0f0f; /* Dark background color for the button */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Slightly reduced padding for a more balanced button size */
+  font-size: 16px; /* Reduced font size */
+  cursor: pointer;
+  border: none; /* Removed border for a cleaner look */
+  border-radius: 500px; /* Reduced border-radius for a softer button edge */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add more styles for button hover, active, etc. as needed */
+.start-btn:hover {
+  background-color: #656363;
+}
+
+/* Optional: Animation for sliding effect */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateX(-100%);
   }
+}
+
+.slideshow-container.animate {
+  animation: slide 5s infinite; /* Adjust duration as needed */
+}
+
+.navbar-container {
+  display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 176px;
+
+position: absolute;
+width: 1031px;
+height: 40px;
+left: 98px;
+top: 34px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* Align items vertically in the logo container */
+  height: 60px; /* Adjusted height for the logo container */
+}
+
+
+.logo-image {
+  width: 50px;
+  height: 40px;
+  margin-right: 10px; /* Add some spacing between the image and text */
+  border-radius: 50%;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+
+}
+
+.frame-one {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Updated alignment to center items vertically */
+  justify-content: space-around; /* Distribute items evenly in the available space */
+  width: 100%; /* Take up the full width of the container */
+  padding: 10px 0; /* Adjusted padding */
+  box-sizing: border-box; /* Include padding and border in the total width and height */
+}
+
+
+.home,
+.services,
+.notif,
+.chat,
+.about-us,
+.contact {
+  height: 38px; /* Set a consistent height for all items in frame-one */
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 146.69%;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  /* Inside auto layout */
+  flex: none;
+  flex-grow: 0;
+  margin-left: 40px;
+
+}
+
+
+.frame-two {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 29px;
+  width: 254px;
+  height: 38px;
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.about-us {
+  width: 106px;
+  height: 23px;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 146.69%;
+  /* or 23px */
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-left: 40px;
+}
+
+.contact {
+  /* Remove position: relative; */
+  width: 68px;
+  height: 23px;
+  /* Remove left and top properties */
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 146.69%;
+  /* or 23px */
+  display: flex;
+  align-items: center;
+  /* white */
+  color: #FFFFFF;
+  margin-left: 10px;
+  margin-right : 100px;
+}
+
+.home:hover {
+  color: #282928; 
+  cursor: pointer;
+}
+.services:hover{
+  color: #282928; 
+  cursor: pointer;
+}
+.notif:hover {
+  color: #282928; 
+  cursor: pointer;
+}
+.chat:hover  {
+  color: #282928;
+  cursor:pointer
+}
+.about-us:hover {
+  color: #282928; 
+  cursor: pointer;
+}
+.contact:hover {
+  color: #0b0b0b; 
+  cursor: pointer;
+}
+
+
+.offer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.offer {
+  background-color: #FBFBFB;
+  border: 5px solid #080808;
+  border-radius: 50px;
+  padding: 20px;
+  text-align: center;
+  width: 200px; /* Adjust the width as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 60px; /* Adjust the margin as needed */
+  box-sizing: border-box; /* Include padding and border in the total width and height */
+}
+
+@keyframes blinkAndSize {
+  0% {
+    font-size: 16px;
+    opacity: 1;
+  }
+  100% {
+    font-size: 20px;
+    opacity: 0.5;
+  }
+}
+
+.offer h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #021a43;
+}
+
+.offer h1 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #021a43;
+}
+
+.grab {
+  background-color: #6759FF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  animation: blinkAndSize 2s infinite alternate;
+
+
+    font-size: 20px;
+    transition: font-size 0.3s ease, opacity 0.3s ease;
+  
+}
+
+.grab:hover {
+  background-color: #543edb;
+  font-size: 24px;
+  opacity: 1
+}
+
+.services {
+  z-index: 0;
 }
